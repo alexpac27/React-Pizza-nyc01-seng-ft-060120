@@ -1,6 +1,7 @@
 import React from "react"
 
-const PizzaForm = () => {
+const PizzaForm = (props) => {
+  console.log("in pizza form", props)
   return(
       <div className="form-row">
         <div className="col-5">
@@ -31,7 +32,7 @@ const PizzaForm = () => {
           </div>
         </div>
         <div className="col">
-          <button type="submit" className="btn btn-success" onClick={console.log}>Submit</button>
+          <button type="submit" className="btn btn-success" onClick={()=>console.log("submit")}>Submit</button>
         </div>
       </div>
 
