@@ -6,13 +6,22 @@ import PizzaList from './containers/PizzaList'
 
 class App extends Component {
 
+  state = {
+    pizza: {}
+  }
+
+  editPizza = (pizzaObj) => {
+    this.setState({pizza: pizzaObj})
+  }
+
+
   render() {
     console.log("in app")
     return (
       <Fragment>
         <Header/>
-        <PizzaForm/>
-        <PizzaList/>
+        <PizzaForm pizza={this.state.pizza}/>
+        <PizzaList edit={this.editPizza}/>
       </Fragment>
     );
   }

@@ -26,7 +26,7 @@ class PizzaList extends Component {
           </tr>
         </thead>
         <tbody>
-          {this.state.pizzaArray.map(pizza => <Pizza key={pizza.id} pizza={pizza} />)}
+          {this.state.pizzaArray.map(pizza => <Pizza key={pizza.id} pizza={pizza} edit={this.props.edit}/>)}
         </tbody>
       </table>
     );
