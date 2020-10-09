@@ -16,7 +16,6 @@ class App extends Component {
 
 
   render() {
-    console.log("in app")
     return (
       <Fragment>
         <Header/>
