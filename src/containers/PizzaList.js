@@ -14,10 +14,12 @@ class PizzaList extends Component {
     .then(data => this.setState({pizzaArray: data}))
   }
 
-  componentDidUpdate(){
-    fetch("http://localhost:3000/pizzas")
-    .then(resp => resp.json())
-    .then(data => this.setState({pizzaArray: data}))
+  componentDidUpdate(prevProps){
+    if (prevProps !== this.props){
+      fetch("http://localhost:3000/pizzas")
+      .then(resp => resp.json())
+      .then(data => this.setState({pizzaArray: data}))
+    }
   }
 
   render() {
